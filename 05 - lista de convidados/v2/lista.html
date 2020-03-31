@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Lista de Convidados V2</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/lista.css" />
+    <script src="js/lista.js"></script>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Adicionar Convidado</h2>
+
+      <div>
+        <input
+          type="text"
+          id="inputConvidado"
+          placeholder="Nome do Convidado"
+          class="card-input"
+        />
+      </div>
+
+      <div class="acoes">
+        <button type="button" onclick="gerenciador.salvar()">
+          Salvar
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Lista de Convidados</h2>
+      <div id="lista"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title>Estacionamento HT</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/estacionamento.css" />
+    <script src="js/EstacionamentoController.js"></script>
+  </head>
+
+  <body>
+    <div class="titulo">
+      <h1>Estacionamento HT</h1>
+    </div>
+
+    <div class="container">
+      <div class="input-div">
+        <label for="inputNome" class="input-label">Nome:</label>
+        <input type="text" id="inputNome" />
+      </div>
+
+      <div class="input-div">
+        <label for="inputMarca" class="input-label">Marca:</label>
+        <input type="text" id="inputMarca" />
+      </div>
+
+      <div class="input-div">
+        <label for="inputAno" class="input-label">Ano:</label>
+        <input type="number" id="inputAno" />
+      </div>
+
+      <div class="botoes">
+        <button type="button" onclick="estacionamentoController.salvar()">
+          Salvar
+        </button>
+        <button type="button" onclick="estacionamentoController.cancelar()">
+          Cancelar
+        </button>
+        <button
+          type="button"
+          onclick="estacionamentoController.calcularResultado()"
+        >
+          Resultado
+        </button>
+      </div>
+    </div>
+
+    <div class="div-tabela">
+      <table class="tabela">
+        <thead>
+          <th>Nome</th>
+          <th>Marca</th>
+          <th>Ano</th>
+          <th></th>
+          <th></th>
+        </thead>
+        <tbody id="tabela-corpo"></tbody>
+      </table>
+    </div>
+
+    <div class="resultados">
+      <fieldset>
+        <legend>Resultados</legend>
+        <span id="maisNovo"></span>
+        <span id="maisVelho"></span>
+        <span id="media"></span>
+      </fieldset>
+    </div>
+  </body>
+</html>

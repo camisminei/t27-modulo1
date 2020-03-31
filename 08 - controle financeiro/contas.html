@@ -1,0 +1,105 @@
+<html>
+  <head>
+    <title>Cadastro de Empresas</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/controle-financeiro.css" />
+    <script src="js/ContasController.js"></script>
+  </head>
+
+  <body onload="contasController.atualizarEstado()">
+    <nav id="menu">
+      <img
+        src="img/close.svg"
+        alt="Botão de fechar menu"
+        class="btn-menu-fechar"
+        id="btn-fechar"
+        onclick="fecharMenu()"
+      />
+
+      <h2>Menu</h2>
+
+      <ul>
+        <a href="empresas.html">
+          <li>Empresas</li>
+        </a>
+
+        <a href="contas.html">
+          <li>Contas</li>
+        </a>
+      </ul>
+    </nav>
+
+    <main id="main">
+      <div class="mensagens" id="mensagens">
+        <img
+          src="img/close.svg"
+          alt="Botão para fechar janela"
+          onclick="fecharMensagem()"
+        />
+        <span id="textoMensagem"></span>
+      </div>
+
+      <img
+        src="img/menu.svg"
+        alt="Botão de abrir menu"
+        class="btn-menu-abrir"
+        id="btn-menu"
+        onclick="abrirMenu()"
+      />
+
+      <h1>Cadastro de Contas</h1>
+
+      <form>
+        <div>
+          <input type="number" placeholder="Valor" id="valor" />
+        </div>
+
+        <div>
+          <label for="tipo">Tipo:</label>
+
+          <select name="tipo" id="tipo">
+            <option value="">Selecione...</option>
+            <option value="Despesa">Despesa</option>
+            <option value="Receita">Receita</option>
+          </select>
+        </div>
+
+        <div>
+          <input type="checkbox" value="paga" id="paga" />
+          <label for="paga">Paga?</label>
+        </div>
+
+        <div>
+          <label for="receptor">Receptor:</label>
+
+          <select name="receptor" id="receptor">
+            <option value="">Selecione...</option>
+          </select>
+        </div>
+
+        <div class="meio">
+          <button type="button" onclick="contasController.salvar()">
+            Salvar
+          </button>
+          <button type="button" onclick="contasController.cancelar()">
+            Cancelar
+          </button>
+        </div>
+      </form>
+
+      <div class="div-tabela">
+        <table class="tabela">
+          <thead>
+            <th>Valor</th>
+            <th>Tipo</th>
+            <th>Paga?</th>
+            <th>Receptor</th>
+            <th></th>
+            <th></th>
+          </thead>
+          <tbody id="tabela-corpo"></tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>

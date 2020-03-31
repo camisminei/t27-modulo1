@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Menu</title>
+    <meta charset="utf-8" />
+    <script src="js/MenuController.js"></script>
+    <link rel="stylesheet" href="css/estilo.css" />
+  </head>
+
+  <body>
+    <div class="card">
+      <h1>Menu</h1>
+      <div>
+        <div class="">
+            [1] - Exibir os números ímpares de 0 a 100
+        </div>
+        <div class="">
+            [2] - Encontrar o nome secreto
+        </div>
+        <div class="">
+            [3] - Ocorrências do número 1 no intervalo
+        </div>
+        <div class="">
+            [4] - Encerrar Execução
+        </div>
+
+        <div>
+            <input type="text"  id="numeroOperacao" placeholder="Digite a opção...">
+        <div>
+            <div>
+                <button type="button" onclick="menuController.seletorDeOpcoes()">Selecionar</button>
+            </div>
+      </div>
+    </div>
+    <div id="subMenu"></div>
+    <div id="operacao"></div>
+  </body>
+</html>

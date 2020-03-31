@@ -1,0 +1,70 @@
+body {
+    font-family: sans-serif;
+    padding: 40px;
+}
+
+.container {
+    display: flex;
+    padding: 0px 40px;
+}
+
+.input-label {
+    widows: 100%;
+    display: flex;
+}
+
+.input-div {
+    margin: 20px;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.botoes {
+    margin-top: 15px;
+    width: 100%;
+    padding: 15px;
+}
+
+.botoes button {
+    padding: 5px;
+    margin: 0px 5px;
+    border: 1px solid black;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, .2);
+}
+
+.div-tabela {
+    padding: 0px 40px;
+    width: 40%;
+    float: left;
+}
+
+.resultados {
+    width: 40%;
+    float: right;
+    margin: 30px 10px;
+}
+
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border-bottom: 1px solid gray;
+    padding: 20px 0px;
+    text-align: left;
+}
+
+td img {
+    width: 20px;
+    cursor: pointer;
+}
+
+th {
+    color: gray;
+    font-weight: 300;
+}

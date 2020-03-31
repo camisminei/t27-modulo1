@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Imprimir Inverso</title>
+    <script src="js/InversoController.js"></script>
+  </head>
+  <body>
+    <div>
+      <input type="number" placeholder="Insira o número" id="inputNumero" />
+
+      <button type="button" onclick="controller.adicionar()">Adicionar</button>
+      <button type="button" onclick="controller.imprimir()">Imprimir</button>
+      <button type="button" onclick="controller.imprimirReverso()">
+        Imprimir Reverso
+      </button>
+    </div>
+
+    <div>
+      <div id="imprimirNormal"></div>
+
+      <div id="imprimirReverso"></div>
+    </div>
+  </body>
+</html>

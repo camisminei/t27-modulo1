@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/estilo.css" />
+    <script src="js/lista-convidado.js"></script>
+    <title>Lista de Convidados</title>
+  </head>
+
+  <body onload="listaConvidado.carregarConvidados()">
+    <div class="card">
+      <h2 class="card-title">Adicionar Convidado</h2>
+      <div class="card-form">
+        <input id="inputNome" type="text" placeholder="Nome do Convidado" />
+        <input type="number" id="inputIdade" placeholder="Idade do Convidado" />
+
+        <label for="inputMasc"> Masculino</label>
+        <input type="radio" name="sexo" id="inputMasc" value="M" />
+        <label for="inputFem"> Feminino</label>
+        <input type="radio" name="sexo" id="inputFem" value="F" />
+
+        <div class="card-acoes">
+          <button onclick="listaConvidado.salvar()" type="button">
+            Salvar
+          </button>
+          <button onclick="listaConvidado.limpar()" type="button">
+            Cancelar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">Lista de Convidados</h2>
+      <table class="tabela-convidados">
+        <thead>
+          <th>Nome</th>
+          <th>Idade</th>
+          <th>Sexo</th>
+          <th></th>
+          <th></th>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </body>
+</html>

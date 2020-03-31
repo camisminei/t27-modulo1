@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <script>
+      function dividir(n1, n2) {
+        return new Promise(function(resolve, reject) {
+          let resultado = n1 / n2;
+
+          n2 > 0 ? resolve(resultado) : reject("Impossível dividir por zero");
+        });
+      }
+
+      function calcularJuros(valor) {
+        return new Promise(function(resolve, reject) {
+          let resultado = valor + valor * 0.1;
+
+          resultado > 0
+            ? resolve(resultado)
+            : reject("Não existe juros negativos!");
+        });
+      }
+
+      function imprimir(resp) {
+        alert("O resultado da divisão é: " + resp);
+      }
+
+      function erro(msg) {
+        alert(msg);
+      }
+
+      async function calcular() {
+        let resposta = await dividir(100, 2);
+        let juros = await calcularJuros(resposta);
+        imprimir(juros);
+      }
+
+      /* dividir(100, 10)
+        .then(calcularJuros)
+        .then(imprimir)
+        .catch(erro); */
+
+      calcular();
+    </script>
+  </head>
+  <body></body>
+</html>
